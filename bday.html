@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HAPPY B-DAY!!! <3</title>
+  <style>
+    body {
+      background: black;
+      color: #0f0;
+      font-family: monospace;
+      padding: 20px;
+    }
+    #terminal {
+      white-space: pre-wrap;
+    }
+    button {
+      background: #0f0;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-family: monospace;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+  <button id="playBtn">▶️ Play :P</button>
+  <audio id="beat" src="bdayforpookie.wav" loop></audio>
+
+  <script>
+    const lines = [
+      "Initializing Alexandra's_birthday.exe...",
+      "Loading surprise files...",
+      "Decrypting secret wishes...",
+      "Access denied...YOU'RE TOO OLD...",
+      "Just kidding I love u...",
+      "Access granted.",
+      "",
+      "HEYO POOKIE!!!",
+      "HAPPY BIRTHDAY I LUV U SO MUCH RAAAAAHHHH <3333 sper ca esti fericita :3 si daca nu esti te fac eu sa fi :333 nu pot sa te iau in brate prin ecran dar nu-i nimic, iti aflu eu adresa si vin peste tine MUHAHAHAHAHAHAHAHAHAHAHAHAAAA >:] sincer nu ma pricep la declaratii da vreau sa-ti zic ca esti cea mai draguta dintre toate fetele de le-am cunoscut <333 esti o dulce. habar n-ai cat m-ai ajutat in mai putin de un an de cand vorbesc cu tine. eh, aproape un an. IL VOI SARBATORI SI PE ALA IHIHIHIHIIII >:3 (nu mai stiu exact in ce data am inceput sa vorbim dar aproximativ pe acolo). ANYWAYS SPER SA TE SIMTI BINE CHIAR DACA DAI NEMERNICUL ALA DE BAC DA LASA CA AM INCREDERE CA IEI 10 SHOW THEM ALL WHAT U CAN DO POOKIE. SLAY.",
+      "",
+      ""
+    ];
+
+    let i = 0;
+    function typeLine() {
+      if (i < lines.length) {
+        document.getElementById("terminal").innerHTML += lines[i] + "\n";
+        i++;
+        setTimeout(typeLine, 800);
+      }
+    }
+    typeLine();
+
+    document.getElementById("playBtn").addEventListener("click", () => {
+      const audio = document.getElementById("beat");
+      audio.play();
+    });
+  </script>
+</body>
+</html>
+
